@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animacija</title>
+</head>
+<style>
+body { 
+     
+  justify-content: center;
+  align-items: center;
+}
+#back {
+width: 500px;
+height: 500px;
+background-color:#050210;
+margin: auto;
+position: absolute;
+}
+#circle1 {
+    width: 300px;
+    height: 300px;
+    border-radius:50%;
+    background:linear-gradient( #fb5dad, #55fb9f, #b97aff);
+    margin:3rem auto;
+    position:relative;
+    border: 1px solid;
+    align-items: center;
+    animation-name: spining;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+
+}
+#circle1:after {
+    background: #050210;
+    width: 86%;
+    height:86%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.9;
+   
+}
+#circle1::before {
+    background: #050210;
+    width: 82%;
+    height:82%;
+    border-radius: 100%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    animation-name: center1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   
+}
+
+#circle2 {
+    width: 100%;
+    height: 100%;
+    border-radius:50%;
+    background:linear-gradient( #fb5dad, #55fb9f, #b97aff);
+    position: relative;
+    margin: 0 auto;
+    border: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    animation-name: spining;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    opacity: 0.75;
+    filter: blur(30px);
+}
+
+
+
+
+@keyframes spining {
+  from {
+      transform: rotate(0deg);
+       }
+   to {transform: rotate(360deg);}
+      }
+@keyframes center1 {
+
+0% {
+    transform: scale(0.1);
+    background-color:  #050210;
+      
+}  
+33% {
+        transform: scale(0.3);
+        background-color:  #433088;
+      
+}  
+66% {
+        transform: scale(0.6);
+        background-color:  #433088;
+      
+}  
+100% {
+    transform: scale(1);
+    background-color:  #050210;
+      
+}
+
+}
+</style>
+<body>
+
+<div id="back">
+    
+<div id="circle1">
+    <div id="circle2"></div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
